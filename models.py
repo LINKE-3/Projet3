@@ -21,7 +21,7 @@ class McGyver():
         super().__init__()
         self.position = Position(x, y)  # self.position.x, self.position.y
         self.map = map
-        self.sprite = pygame.image.load("C:\\Users\\alain\\Documents\\Open Classroom\\P3_Linke_Marin\\MacGyver.png")
+        self.sprite = pygame.image.load("ressource\\MacGyver.png")
         self.items = 0
         
         #define the hero coordinates on the map
