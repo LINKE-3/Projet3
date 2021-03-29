@@ -1,10 +1,4 @@
 import pygame
-from P3_Linke_Marin import *
-from extract_map import *
-from view import *
-
-
-
 
 
 class Position:
@@ -12,7 +6,9 @@ class Position:
         self.x = x
         self.y = y
 
-    #define coordinate variables
+    # define coordinate variables
+
+
 class McGyver():
 
     def __init__(self, map=None, sprite=None):
@@ -23,30 +19,25 @@ class McGyver():
         self.map = map
         self.sprite = pygame.image.load("ressource\\MacGyver.png")
         self.items = 0
-        
-        #define the hero coordinates on the map
 
+        # define the hero coordinates on the map
 
     def move(self, input):
         a = True
-        if input == "HAUT" and self.map[self.position.x][self.position.y+1] == "0":
-                self.position.y += 1 
-            
-        elif input == "BAS" and self.map[self.position.x][self.position.y-1] == "0":
-                self.position.y -= 1
-        elif input == "DROITE" and self.map[self.position.x+1][self.position.y] == "0":
-                self.position.x += 1
-        elif input == "GAUCHE" and self.map[self.position.x-1][self.position.y] == "0":
-                self.position.x -= 1
-        else : 
+        if (input == "HAUT" and
+                self.map[self.position.x][self.position.y+1] == "0"):
+            self.position.y += 1
+        elif (input == "BAS" and
+              self.map[self.position.x][self.position.y-1] == "0"):
+            self.position.y -= 1
+        elif (input == "DROITE" and
+                       self.map[self.position.x+1][self.position.y] == "0"):
+            self.position.x += 1
+        elif (input == "GAUCHE" and
+              self.map[self.position.x-1][self.position.y] == "0"):
+            self.position.x -= 1
+        else:
             a = False
         return a
-                
-        #move the hero on the map
-        
 
-   
-
-     
-
-
+        # move the hero on the map
